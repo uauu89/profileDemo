@@ -1,0 +1,103 @@
+.formSearchOption{
+    display: none;
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+    padding: 30px 40px;
+    border-radius: 5px;
+    background-color: var(--color_gray);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+.active{
+    display: block;
+}
+
+.btnClose{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: var(--color_textDefault);
+}
+
+.tagList{
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+}
+
+
+
+
+
+.searchMethodWrap{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 16px;
+    margin-top: 60px;
+}
+
+.searchMethodWrap > ul{
+    display: flex;
+    gap: 20px
+}
+
+.searchMethodWrap input[name="searchMethod"]{
+    position: absolute;
+    opacity: 0;
+}
+
+.searchMethodWrap label{
+    display: block;
+    width: 80px;
+    background-color: #D9D9D9;
+    font-weight: 700;
+    line-height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.searchMethodWrap :focus-visible + label{
+    outline: auto;
+    outline-color: #000;
+}
+.searchMethodWrap :checked + label{
+    color: #fff;
+    background-color: var(--color_main);
+}
+
+
+
+
+@media (max-width:700px) {
+    .formSearchOption{
+        left: 0px;
+        /* right: 20px; */
+        margin-top: 10px;
+        padding: 20px 30px;
+        width: 85vw
+    }
+    .tagList{
+        column-gap: 20px;
+        row-gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .searchMethodWrap{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        font-size: 16px;
+        margin-top: 60px;
+    }
+
+
+    .searchMethodWrap p{
+        display: none;
+    }
+}
+

@@ -1,0 +1,205 @@
+
+
+.noResult{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+
+
+
+
+
+.wrap{
+    display: grid;
+    grid-template-rows: min-content auto;
+    height: 100%;
+    padding: 60px 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.btnSearchWrap{
+    position: relative;
+}
+
+.btn_search{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+}
+.btn_search::before{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    vertical-align: bottom;
+    background-color: var(--color_main);
+    margin-right: 6px;
+}
+.btn_search::after{
+    font-family: "Font Awesome 6 Free";
+    display: inline-block;
+    content: "\f0d7";
+    font-size: 16px;
+    font-weight: 700;
+    vertical-align: bottom;
+    margin-left: 3px;
+    transition: 0.3s;
+}
+
+.active::after{
+    transform: rotate(180deg);
+}
+
+
+.viewOptionWrap{
+    display: flex;
+    gap: 15px;
+}
+
+.posRel{
+    position: relative;
+}
+
+
+.input{
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+
+.label{
+    cursor: pointer;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+}
+
+.check .label{
+    background-color: var(--color_main);
+    color: #fff;
+}
+
+.check .iconTable ::before{color: var(--color_main);}
+.check .iconTable ::after{background-color: #fff;}
+
+input:focus-visible + label{
+    outline: auto;
+    outline-color: #000;
+}
+
+.iconTable{
+    font-size: 36px;
+    color: #D9D9D9;
+}
+
+.iconTable ::before{
+    z-index: 1;
+    position: relative;
+}
+.iconTable ::after{
+    content: "";
+    display: block;
+    background-color: var(--color_textDefault);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+/* 포트폴리오 리스트 */
+
+.portfolioList{
+    margin-top: 30px;
+    /* padding: 50px 10px; */
+    padding: 50px 20px 50px 0;
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 180px;
+    overflow-y: scroll;
+}
+
+.portfolioList::-webkit-scrollbar {
+    width: 10px;
+}
+.portfolioList::-webkit-scrollbar-thumb {
+    /* background: #242; */
+    background: rgba(255,255,255, 0.5);
+    border: 2px solid var(--color_main);
+    border-radius:5px;
+}
+.portfolioList::-webkit-scrollbar-track {
+    border-radius:5px;
+	background: var(--color_main); 
+}
+
+
+
+.portfolioList.list{}
+
+
+/* 포트폴리오 리스트 - 바둑형 보기 */
+.portfolioList.table{
+    grid-template-columns: repeat(auto-fill, minmax(338px, auto));
+    justify-content: space-around;
+    grid-auto-rows: max-content;
+    column-gap: 20px;
+    row-gap: 100px;
+}
+
+
+@media (max-width: 1000px) {
+    .portfolioList{
+        margin-top: 30px;
+        padding: 50px 20px 50px 0;
+        display: grid;
+        grid-template-rows: min-content;
+        gap: 50px;
+        overflow-y: scroll;
+    }
+
+
+    .iconList ::before{
+        content: "\f0c9";
+    }
+}
+
+
+
+@media (max-width: 500px){
+    .wrap{
+        padding: unset;
+        padding-top: 30px;
+    }
+    .portfolioList.table{
+        grid-template-columns: unset;
+    }
+
+    .btn_search{
+        font-size: 16px;
+    }
+    .btn_search::after{
+        display: none;
+    }
+
+}
+
