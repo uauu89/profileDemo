@@ -19,13 +19,11 @@ export default class NewTagItem extends Component{
         document.querySelector("#color_"+this.props.data.idx).value = value;
         this.setState({color : value});
     }
-
     componentDidUpdate(prevProps, prevState){
         if(prevState !== this.state){
             this.props.insertNewTag(this.state);
         }
     }
-       
     render(){
         return(
             <div className={styles.rows} data-type="insert">
@@ -44,7 +42,7 @@ export default class NewTagItem extends Component{
                 <input type="text" name="name" placeholder="언어명"
                     id={"name_"+this.props.data.idx}
                     className={`${styles.inputStyle} ${styles.inputName}`}
-                    defaultValue={this.state.name}
+                    value={this.state.name}
                     onChange={e=>{this.setState({name : e.currentTarget.value});}}
                 >
                 </input>
@@ -52,14 +50,14 @@ export default class NewTagItem extends Component{
                     <input type="text" name="color" placeholder="#000000"
                         id={"color_"+this.props.data.idx}
                         className={`${styles.inputStyle} ${styles.inputColor}`}
-                        defaultValue={this.state.color}
+                        value={this.state.color}
                         onChange={e=>{this.changeColor(e.currentTarget.value);}}
                     >
                     </input>
                     <input type="color" name="colorPicker" tabIndex="-1"
                         id={"colorPicker_"+this.props.data.idx}
                         className={styles.inputPicker}
-                        defaultValue={this.state.color}
+                        value={this.state.color}
                         onChange={e=>{this.changeColorPicker(e.currentTarget.value);}}
                     >
                     </input>

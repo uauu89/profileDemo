@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import Introduction from "./component/user/Introduction";
 import Portfolio from "./component/user/Portfolio";
@@ -57,10 +58,9 @@ export default class App extends Component{
       this.getList();
     }
   }
-
   render(){
     return(
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <header>
             <h1 className="hidden">데모 페이지</h1>
             <nav>
@@ -109,20 +109,23 @@ export default class App extends Component{
           <Route path="/" element={<Introduction />}></Route>
           <Route path="/portfolio" element={<Portfolio data={this.state}/>}></Route>
           <Route path="/modPortfolio" element={
-            <ModPortfolioPage
+            <ModPortfolioPage 
               data={this.state}
               pofolUpdate={this.pofolUpdate}
-            />}>
+              logOut={this.logOut}
+            /> 
+          }>
           </Route>
           <Route path="/modTag" element={
             <ModTagPage 
               data={this.state}
               tagUpdate={this.tagUpdate}
               pofolUpdate={this.pofolUpdate}
+              logOut={this.logOut}
             />
           }/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
 
     )
   }

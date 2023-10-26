@@ -1,4 +1,3 @@
-/* .portfolioList > li{ */
 .wrap{
     display: grid;
     grid-template-columns: max-content auto;
@@ -45,6 +44,7 @@
 
 .itemWrap p{
     text-indent: 10px;
+    line-height: 1.6;
 }
 .itemWrap p:first-of-type{
     margin-bottom: 30px;
@@ -225,11 +225,11 @@
 
 @media (max-width:460px){
     [class*=table] .wrap{
-        width: fit-content;
+        width: 100%;
+        text-align: center;
     }
 
     [class*=table] .imgFrameWrap{
-        
         width: 256px;
         height: 151px;
     }

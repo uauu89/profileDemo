@@ -2,7 +2,19 @@
     padding: 50px 0;
     overflow: hidden;
     height: 100%;
-    /* display: grid;
-    grid-template-rows: min-content auto; */
+    display: grid;
+}
+
+.btn_logOut{
+    justify-self: end;
+    color: #fff;
+    background-color: var(--color_main);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 32px;
+    width: 120px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 

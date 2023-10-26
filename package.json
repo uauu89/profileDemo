@@ -30,7 +30,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "nodemon server.js"
-
   },
   "eslintConfig": {
     "extends": [

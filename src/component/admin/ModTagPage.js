@@ -117,7 +117,7 @@ export default class ModTagPage extends Component{
         alert("수정되었습니다")
     }
     
-    componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(prevProps){
         if(JSON.stringify(this.props.data.tag) !== JSON.stringify(prevProps.data.tag)){
             this.setState({
                 ...this.props.data.tag

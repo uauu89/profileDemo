@@ -1,14 +1,7 @@
-
-
 .noResult{
     grid-column: 1 / -1;
     text-align: center;
 }
-
-
-
-
-
 
 .wrap{
     display: grid;
@@ -120,12 +113,6 @@ input:focus-visible + label{
     transform: translate(-50%, -50%);
 }
 
-
-
-
-
-
-
 /* 포트폴리오 리스트 */
 
 .portfolioList{
@@ -153,8 +140,9 @@ input:focus-visible + label{
 }
 
 
-
-.portfolioList.list{}
+.portfolioList.list{
+    display: grid;
+}
 
 
 /* 포트폴리오 리스트 - 바둑형 보기 */

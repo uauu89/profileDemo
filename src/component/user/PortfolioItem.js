@@ -11,8 +11,6 @@ export default class PortfolioItem extends Component{
         arraySkill.pop();
         return(
             <li className={styles.wrap}>
-                {/* <img src={this.props.data.imgSrc} alt="" style={{borderColor: this.props.data.themeColor}} /> */}
-
                 <div className={styles.imgFrameWrap}>
                     <div
                         className={styles.imgFrame}
