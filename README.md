@@ -39,6 +39,7 @@
 <br />
 
 ## 수정내역
+<details>
 
 #### 23.10.24
 
@@ -54,3 +55,9 @@
    >    + ModTagItem > ComponentDidUpdate 조건 추가
    >    + ModTagItem > defualtValue → value 변경
    > + CSS 스타일 수정
+
+#### 23.10.27
+
+1. > + CSS 수정
+
+</details>
