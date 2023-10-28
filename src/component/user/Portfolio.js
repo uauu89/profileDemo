@@ -103,7 +103,7 @@ export default class Portfolio extends Component{
                             className={`${styles.btn_search} ${this.state.formOpen > -1 ? styles.active : ""}`}
                             onClick={e=>this.formClose(e)}
                         >
-                            사용언어로 검색하기
+                            검색옵션
                         </a>
                         <PortfolioForm 
                             formOpen = {this.state.formOpen}

@@ -23,8 +23,9 @@
 }
 
 .tagList{
-    gap: 50px;
     display: grid;
+    column-gap: 50px;
+    row-gap: 30px;
     grid-template-columns: repeat(4, max-content);
 }
 
@@ -76,14 +77,12 @@
 @media (max-width:700px) {
     .formSearchOption{
         left: 0px;
-        /* right: 20px; */
         margin-top: 10px;
         padding: 20px 30px;
         width: 85vw
     }
     .tagList{
         column-gap: 20px;
-        row-gap: 30px;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 
